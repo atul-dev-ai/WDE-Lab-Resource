@@ -28,6 +28,14 @@ Currently, the repository is organized as follows:
 
 ---
 
+## 🌐 Live Previews
+Assignments ebong Lab-er kajgulo live dekhte niche click korun:
+
+* 🚀 **[Lab 1: Basic HTML](https://atul-codee.github.io/WDE-Lab-Resource/Lab_1/)**
+* 🚀 **[Lab 2: Advanced Layout](https://atul-codee.github.io/WDE-Lab-Resource/Lab_2/)**
+
+---
+
 ## 📅 Progress Tracker
 | Topic / Assignment | Status | Date |
 | :--- | :--- | :--- |

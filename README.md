@@ -4,6 +4,10 @@ Welcome to my repository for the **Web Development Essentials (WDE)** course. Th
 
 ## 👤 Student Information
 - **Name:** Atul Paul
+- **Student ID:** 252-16-052
+- **Department:** Computing and Information System
+- **Batch:** 252
+- **Section:** 22_A
 - **GitHub:** [Atul-codee](https://github.com/Atul-codee)
 - **Course:** Web Development Essentials (WDE)
 

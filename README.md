@@ -1,1 +1,39 @@
-# WDE-Lab-Resource
+# WDE Lab Resources & Assignments 🚀
+
+Welcome to my repository for the **Web Development Essentials (WDE)** course. This repository is dedicated to storing all the lab works, practice codes, and official assignments completed during the course.
+
+## 👤 Student Information
+- **Name:** Atul Paul
+- **GitHub:** [Atul-codee](https://github.com/Atul-codee)
+- **Course:** Web Development Essentials (WDE)
+
+## 📌 Repository Purpose
+This repository serves as a central hub for:
+- 📝 **Lab Exercises:** Daily practice and classroom codes.
+- 📂 **Assignments:** Project-based tasks assigned by the instructor.
+- 🛠️ **Resources:** Useful snippets and references for web development.
+
+## 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Tools:** Git, GitHub, VS Code
+
+## 📁 Folder Structure
+Currently, the repository is organized as follows:
+- `/Lab-Works`: Contains topic-wise practice files (e.g., HTML Basics, CSS Layouts).
+- `/Assignments`: Dedicated folders for each major assignment.
+
+---
+
+## 📅 Progress Tracker
+| Topic / Assignment | Status | Date |
+| :--- | :--- | :--- |
+| Repository Setup | ✅ Completed | 27 - Jan - 2026 |
+| HTML Basics 01 | ✅ Completed | 27 - Jan - 2026 |
+| HTML Basics 02 | ⏳ Pending | - |
+
+---
+
+## 🚀 How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/Atul-codee/WDE-Lab-Resource.git](https://github.com/Atul-codee/WDE-Lab-Resource.git)

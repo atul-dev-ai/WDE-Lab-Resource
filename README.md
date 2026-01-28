@@ -8,7 +8,7 @@ Welcome to my repository for the **Web Development Essentials (WDE)** course. Th
 - **Department:** Computing and Information System
 - **Batch:** 252
 - **Section:** 22_A
-- **GitHub:** [Atul-codee](https://github.com/Atul-codee)
+- **GitHub:** [Atul-codee](https://github.com/atul-dev-ai)
 - **Course:** Web Development Essentials (WDE)
 
 ## 📌 Repository Purpose
@@ -31,8 +31,8 @@ Currently, the repository is organized as follows:
 ## 🌐 Live Previews
 Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 
-* 🚀 **[Lab 1: Basic HTML](https://atul-codee.github.io/WDE-Lab-Resource/Lab_1/)**
-* 🚀 **[Lab 2: Advanced Layout](https://atul-codee.github.io/WDE-Lab-Resource/Lab_2/)**
+* 🚀 **[Lab 1: Basic HTML](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_1/)**
+* 🚀 **[Lab 2: Advanced Layout](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_2/)**
 
 ---
 
@@ -48,4 +48,4 @@ Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 ## 🚀 How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Atul-codee/WDE-Lab-Resource.git](https://github.com/Atul-codee/WDE-Lab-Resource.git)
+   git clone [https://github.com/atul-dev-ai/WDE-Lab-Resource.git](https://github.com/atul-dev-ai/WDE-Lab-Resource.git)

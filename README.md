@@ -41,11 +41,16 @@ Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 | :--- | :--- | :--- |
 | Repository Setup | ✅ Completed | 27 - Jan - 2026 |
 | HTML Basics 01 | ✅ Completed | 27 - Jan - 2026 |
-| HTML Basics 02 | ⏳ Pending | - |
+| HTML Basics 02 | ✅ Completed | 03 - Feb - 2026 |
+| HTML Basics 03 | ⏳ Pending | - |
+| HTML Assignment 01 | ⏳ Pending | - |
+| HTML Basics 04 | ⏳ Pending | - |
+| HTML Basics 05 | ⏳ Pending | - |
+| HTML Basics 06 | ⏳ Pending | - |
 
 ---
 
 ## 🚀 How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/atul-dev-ai/WDE-Lab-Resource.git](https://github.com/atul-dev-ai/WDE-Lab-Resource.git)
+   git clone https://github.com/atul-dev-ai/WDE-Lab-Resource.git

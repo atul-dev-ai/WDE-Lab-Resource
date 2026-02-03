@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Output css file link -->
+  <link rel="stylesheet" href="src/output.css">
+
+  <title>LifeFlow | Blood & Oxygen Aid | ATUL</title>
+</head>
+
+<body class="bg-gray-50 ">
+  <!-- Navbar start here -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20">
+
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <div class="bg-red-600 p-2 rounded-lg">
+              <i class="fa-solid fa-droplet text-white text-2xl"></i>
+            </div>
+            <span class="text-2xl font-bold tracking-tighter text-gray-800">
+              Life<span class="text-red-600">Flow</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Home</a>
+          <a href="#find-donor" class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Find
+            Donor</a>
+          <a href="#oxygen-section"
+            class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Oxygen</a>
+          <a href="#volunteers"
+            class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Volunteers</a>
+          <a href="#volunteers"
+            class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Developer</a>
+        </div>
+
+        <div class="hidden md:flex items-center">
+          <button
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-red-200 transition-all duration-300 transform hover:scale-105 active:scale-95">
+            <i class="fa-solid fa-circle-exclamation mr-2"></i>Emergency Request
+          </button>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-600 hover:text-red-600 focus:outline-none cursor-pointer">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6">
+      <a href="#" class="block py-2 text-gray-600 font-medium">Home</a>
+      <a href="#find-donor" class="block py-2 text-gray-600 font-medium">Find Donor</a>
+      <a href="#oxygen-section" class="block py-2 text-gray-600 font-medium">Oxygen</a>
+      <a href="#volunteers" class="block py-2 text-gray-600 font-medium">Volunteers</a>
+      <a href="#" class="block py-2 text-gray-600 font-medium">Developer</a>
+      <button
+        class="mt-4 w-full bg-red-600 text-white py-3 rounded-xl font-bold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">Emergency
+        Request</button>
+    </div>
+  </nav>
+  <!-- Navbar end here -->
+
+  <!-- Main Section start here -->
+  <section class="relative bg-white py-16 lg:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Small Live icon -->
+        <div class="space-y-8">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full text-red-600 font-bold text-xs uppercase tracking-widest">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+            </span>
+            Live Health Insights: Bangladesh
+          </div>
+          <h1 class="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1]">
+            Every Drop <br>
+            <span class="text-red-600">Saves a Life.</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-lg leading-relaxed italic border-l-4 border-red-600 pl-4">
+            "Apnar deya ek bag rokto bachiye dite pare ekta poribarer shopno. Aj-i amader community-te jukto hon ebong
+            manobotar
+            pashe daran."
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button
+              class="bg-red-600 hover:bg-red-700 text-white px-8 py-5 rounded-2xl font-bold shadow-2xl shadow-red-200 transition-all transform hover:-translate-y-1 active:scale-95">
+              I Need Blood
+            </button>
+            <button
+              class="bg-white border-2 border-gray-200 hover:border-red-600 text-gray-800 px-8 py-5 rounded-2xl font-bold transition-all transform hover:-translate-y-1 active:scale-95">
+              Become a Donor
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+
+          <div
+            class="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center transform hover:scale-105 transition-all duration-300">
+            <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-droplet text-red-600 text-3xl"></i>
+            </div>
+            <span id="liveDemand" class="text-5xl font-black text-gray-900 counter-val">0</span>
+            <p class="text-gray-500 font-semibold mt-2 uppercase text-xs tracking-widest">Units Needed Today</p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center sm:mt-12 transform hover:scale-105 transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-user-check text-blue-600 text-3xl"></i>
+            </div>
+            <span data-target="1450" class="stat-counter text-5xl font-black text-gray-900">0</span>
+            <p class="text-gray-500 font-semibold mt-2 uppercase text-xs tracking-widest">Active Donors</p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center transform hover:scale-105 transition-all duration-300">
+            <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-wind text-green-600 text-3xl"></i>
+            </div>
+            <span data-target="82" class="stat-counter text-5xl font-black text-gray-900">0</span>
+            <p class="text-gray-500 font-semibold mt-2 uppercase text-xs tracking-widest">Oxygen Hubs</p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center sm:mt-12 transform hover:scale-105 transition-all duration-300">
+            <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fa-solid fa-location-dot text-orange-600 text-2xl"></i>
+            </div>
+            <div class="flex items-baseline">
+              <span data-target="5200" class="stat-counter text-5xl font-black text-gray-900">0</span>
+              <span class="text-2xl font-bold text-gray-400 ml-1">+</span>
+            </div>
+            <p class="text-gray-500 font-semibold mt-2 uppercase text-xs tracking-widest">Lives Impacted</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main Section(Hero section) end here -->
+
+  <!-- Find Donor section start here -->
+  <section id="find-donor" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white">Find a <span class="text-red-600">Donor</span>
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">Real-time donor search across Bangladesh</p>
+      </div>
+
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-xl border border-gray-100 dark:border-gray-700 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Blood Group</label>
+            <select id="blood-filter"
+              class="w-full p-4 rounded-xl bg-gray-50 dark:bg-gray-700 dark:text-white border-none focus:ring-2 focus:ring-red-500">
+              <option value="all">All Groups</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Location</label>
+            <input type="text" id="location-filter" placeholder="e.g. Dhaka"
+              class="w-full p-4 rounded-xl bg-gray-50 dark:bg-gray-700 dark:text-white border-none focus:ring-2 focus:ring-red-500">
+          </div>
+          <div class="flex items-end">
+            <button onclick="filterDonors()"
+              class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-red-200 dark:shadow-none">
+              <i class="fa-solid fa-magnifying-glass mr-2"></i> Search Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="donor-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      </div>
+    </div>
+  </section>
+  <!-- Find Donor section end here -->
+  <!-- Donor Registration form here -->
+  <section id="register-donor" class="py-20 bg-white dark:bg-gray-800 transition-colors">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-gray-50 dark:bg-gray-900 p-10 rounded-[2.5rem] shadow-inner border border-gray-100 dark:border-gray-700">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Become a <span class="text-red-600">Life
+              Saver</span></h2>
+          <p class="text-gray-500 mt-2">Join our community and save lives today.</p>
+        </div>
+
+        <form id="registration-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input type="text" id="reg-name" required placeholder="Full Name"
+            class="p-4 rounded-xl bg-white dark:bg-gray-800 dark:text-white border-none focus:ring-2 focus:ring-red-500 shadow-sm">
+          <input type="tel" id="reg-phone" required placeholder="Phone Number"
+            class="p-4 rounded-xl bg-white dark:bg-gray-800 dark:text-white border-none focus:ring-2 focus:ring-red-500 shadow-sm">
+          <select id="reg-group" required
+            class="p-4 rounded-xl bg-white dark:bg-gray-800 dark:text-white border-none focus:ring-2 focus:ring-red-500 shadow-sm">
+            <option value="">Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="B+">B+</option>
+            <option value="O+">O+</option>
+            <option value="AB+">AB+</option>
+          </select>
+          <input type="text" id="reg-area" required placeholder="Your Area"
+            class="p-4 rounded-xl bg-white dark:bg-gray-800 dark:text-white border-none focus:ring-2 focus:ring-red-500 shadow-sm">
+          <div class="md:col-span-2">
+            <button type="submit"
+              class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-5 rounded-xl transition-all transform active:scale-95 shadow-xl">
+              Register as Donor
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Donor Registration section end here -->
+
+  <!-- Oxygen Aid section Start here -->
+  <section id="oxygen-section" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-4">
+            Oxygen <span class="text-blue-600">Support</span> Hub
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 font-medium italic border-l-4 border-blue-600 pl-4">
+            "জরুরি মুহূর্তে অক্সিজেন সিলিন্ডার এবং কনসেন্টেটর খুঁজে পেতে আমাদের ভলান্টিয়ারদের সাথে যোগাযোগ করুন।"
+          </p>
+        </div>
+        <button
+          class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-blue-200 dark:shadow-none transition-all transform active:scale-95">
+          <i class="fa-solid fa-truck-medical mr-2"></i> Join as Provider
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-all group">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+              <i
+                class="fa-solid fa-briefcase-medical text-blue-600 dark:text-blue-400 group-hover:text-white text-2xl"></i>
+            </div>
+            <span class="px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-xs font-bold uppercase">24/7
+              Service</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Al-Modina Oxygen</h3>
+          <p class="text-gray-500 dark:text-gray-400 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-blue-500"></i> Mirpur-10, Dhaka
+          </p>
+          <div class="pt-6 border-t border-gray-50 dark:border-gray-700 flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Cylinders</span>
+              <span class="text-gray-900 dark:text-white font-bold">12 Available</span>
+            </div>
+            <a href="tel:01700000000"
+              class="bg-blue-600 text-white p-4 rounded-2xl hover:bg-gray-900 dark:hover:bg-white dark:hover:text-gray-900 transition-all shadow-lg">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-all group">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+              <i class="fa-solid fa-wind text-blue-600 dark:text-blue-400 group-hover:text-white text-2xl"></i>
+            </div>
+            <span class="px-4 py-1.5 bg-green-100 text-green-600 rounded-full text-xs font-bold uppercase">Refill
+              Available</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Savar Oxygen Bank</h3>
+          <p class="text-gray-500 dark:text-gray-400 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-blue-500"></i> Savar, Dhaka
+          </p>
+          <div class="pt-6 border-t border-gray-50 dark:border-gray-700 flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Cylinders</span>
+              <span class="text-gray-900 dark:text-white font-bold">08 Available</span>
+            </div>
+            <a href="tel:01700000000"
+              class="bg-blue-600 text-white p-4 rounded-2xl hover:bg-gray-900 dark:hover:bg-white dark:hover:text-gray-900 transition-all shadow-lg">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 hover:-translate-y-2 transition-all group">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+              <i
+                class="fa-solid fa-briefcase-medical text-blue-600 dark:text-blue-400 group-hover:text-white text-2xl"></i>
+            </div>
+            <span class="px-4 py-1.5 bg-orange-100 text-orange-600 rounded-full text-xs font-bold uppercase">Low
+              Stock</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">City Aid Support</h3>
+          <p class="text-gray-500 dark:text-gray-400 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-blue-500"></i> Uttara, Dhaka
+          </p>
+          <div class="pt-6 border-t border-gray-50 dark:border-gray-700 flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Cylinders</span>
+              <span class="text-gray-900 dark:text-white font-bold">02 Available</span>
+            </div>
+            <a href="tel:01700000000"
+              class="bg-blue-600 text-white p-4 rounded-2xl hover:bg-gray-900 dark:hover:bg-white dark:hover:text-gray-900 transition-all shadow-lg">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Oxygen Aid section End here -->
+
+  <!-- Volunteers Section Start here -->
+  <section id="volunteers" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-4">
+          Our Dedicated <span class="text-red-600">Volunteers</span>
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto">
+          "Manush manusher jonno." Amader ei sena-ra din-rat kaj kore jacchen apnader shebay.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div
+          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
+          <div class="relative w-32 h-32 mx-auto mb-6">
+            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
+            </div>
+            <img src="https://ui-avatars.com/api/?name=Atul+Paul&background=random" alt="Atul"
+              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Atul Paul</h3>
+          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Lead Coordinator</p>
+          <div class="flex justify-center gap-4 text-gray-400">
+            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div
+          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
+          <div class="relative w-32 h-32 mx-auto mb-6">
+            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
+            </div>
+            <img src="https://ui-avatars.com/api/?name=Sifat+Ahmed&background=random" alt="Sifat"
+              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sifat Ahmed</h3>
+          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Blood Moderator</p>
+          <div class="flex justify-center gap-4 text-gray-400">
+            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div
+          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
+          <div class="relative w-32 h-32 mx-auto mb-6">
+            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
+            </div>
+            <img src="https://ui-avatars.com/api/?name=Rahat+Khan&background=random" alt="Rahat"
+              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Rahat Khan</h3>
+          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Field Volunteer</p>
+          <div class="flex justify-center gap-4 text-gray-400">
+            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div
+          class="bg-red-600 p-6 rounded-[2rem] text-center flex flex-col items-center justify-center text-white shadow-xl shadow-red-200 dark:shadow-none hover:scale-105 transition-transform">
+          <i class="fa-solid fa-handshake-angle text-4xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">Want to Join?</h3>
+          <p class="text-red-100 text-sm mb-6">Amader community-te volunteer hisebe kaj korun.</p>
+          <button class="bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-colors">Apply
+            Now</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Developer Section -->
+  <section id="developer" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-white dark:bg-gray-800 rounded-[3rem] p-8 md:p-16 shadow-2xl border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-red-50 dark:bg-red-900/10 rounded-full -mr-32 -mt-32 transition-colors">
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+
+          <div class="flex justify-center">
+            <div class="relative group">
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 rounded-[3rem] overflow-hidden border-8 border-gray-50 dark:border-gray-700 shadow-2xl transform group-hover:rotate-3 transition-transform duration-500">
+                <img src="/LifeFlow/assets/atul-profile.jpg" alt="Atul Paul" class="w-full h-full object-cover">
+              </div>
+              <div
+                class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-700 px-6 py-3 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-600">
+                <p class="text-xs font-black text-red-600 uppercase tracking-widest">Lead Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6 text-center lg:text-left">
+            <div>
+              <h4 class="text-red-600 font-bold uppercase tracking-widest text-sm mb-2">Developed By</h4>
+              <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white">Atul Paul</h2>
+              <p class="text-xl text-gray-600 dark:text-gray-400 mt-2 font-medium">BSc in Web Development & Generative
+                AI
+              </p>
+            </div>
+
+            <p
+              class="text-gray-500 dark:text-gray-400 leading-relaxed italic border-l-4 lg:border-l-4 border-red-600 pl-4">
+              "I am passionate about building solutions that make an impact. LifeFlow is my vision for a connected
+              healthcare community in Bangladesh."
+            </p>
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+              <a href="https://github.com/Atul-dev-ai" target="_blank"
+                class="flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-xl hover:bg-red-600 transition-all">
+                <i class="fa-brands fa-github text-xl"></i>
+                <span class="font-bold">Atul-dev-ai</span>
+              </a>
+              <div class="flex gap-2">
+                <a href="#"
+                  class="p-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-xl hover:bg-red-600 hover:text-white transition-all">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                  class="p-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-xl hover:bg-red-600 hover:text-white transition-all">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section start from here -->
+  <footer
+    class="bg-white dark:bg-gray-800 pt-16 pb-8 border-t border-gray-100 dark:border-gray-700 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+        <div class="space-y-6">
+          <div class="flex items-center gap-2">
+            <div class="bg-red-600 p-2 rounded-lg">
+              <i class="fa-solid fa-droplet text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-bold text-gray-800 dark:text-white">Life<span
+                class="text-red-600">Flow</span></span>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+            Connecting heroes with those in need. Join our community to save lives through blood and oxygen support.
+          </p>
+          <div class="flex gap-4">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white transition-all"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white transition-all"><i
+                class="fa-brands fa-twitter"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white transition-all"><i
+                class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Find Blood
+                Donor</a></li>
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Emergency
+                Oxygen</a></li>
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Register as
+                Donor</a></li>
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Volunteer
+                Team</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Support</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">How it
+                Works</a>
+            </li>
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Safety
+                Guidelines</a></li>
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Terms of
+                Service</a></li>
+            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Contact Us</h4>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-red-600 mt-1"></i>
+              <p class="text-gray-500 dark:text-gray-400">Dhaka, Bangladesh</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-red-600 mt-1"></i>
+              <p class="text-gray-500 dark:text-gray-400">+880 16093 98958</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-red-600 mt-1"></i>
+              <p class="text-gray-500 dark:text-gray-400">paulatul020@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="pt-8 border-t border-gray-100 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <p class="text-gray-500 dark:text-gray-400 text-sm font-medium">
+          © 2026 LifeFlow. Developed with ❤️ by <span class="text-red-600 font-bold cursor-pointer"><a
+              href="https://github.com/atul-dev-ai" target="_blank">Atul Paul</a></span>.
+        </p>
+        <p class="text-gray-400 text-xs tracking-widest uppercase">
+          BSc in Computing and Information System major in AI
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Main JavaScript file link -->
+  <script src="src/input.js"></script>
+</body>
+
+</html>

@@ -31,7 +31,7 @@ Currently, the repository is organized as follows:
 ## 🌐 Live Previews
 Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 
-* 🚀 **[LfeFlow: ](https://atul-dev-ai.github.io/WDE-Lab-Resource/LifeFlow/)**
+* 🚀 **[LifeFlow: Live health issue solve](https://atul-dev-ai.github.io/WDE-Lab-Resource/LifeFlow/)**
 * 🚀 **[Lab 1: Basic HTML](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_1/)**
 * 🚀 **[Lab 2: Advanced Layout](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_2/)**
 

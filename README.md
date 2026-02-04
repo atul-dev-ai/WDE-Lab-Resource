@@ -25,6 +25,7 @@ This repository serves as a central hub for:
 Currently, the repository is organized as follows:
 - `/Lab-Works`: Contains topic-wise practice files (e.g., HTML Basics, CSS Layouts).
 - `/Assignments`: Dedicated folders for each major assignment.
+- `/LifeFlow`: This folder for LifeFlow website Project.
 
 ---
 

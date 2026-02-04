@@ -20,7 +20,7 @@ document
 
     Swal.fire({
       title: "Application Received!",
-      text: `Hi ${newVolunteer.name}, your info is saved locally.`,
+      text: `Hi ${newVolunteer.name}, you are successfully registered as a volunteer.`,
       icon: "success",
       confirmButtonColor: "#dc2626",
     }).then(() => {

@@ -110,14 +110,16 @@
             pashe daran."
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <button
+            <!-- <button
               class="bg-red-600 hover:bg-red-700 text-white px-8 py-5 rounded-2xl font-bold shadow-2xl shadow-red-200 transition-all transform hover:-translate-y-1 active:scale-95 duration-300">
               I Need Blood
-            </button>
-            <button
+            </button> -->
+            <a href="#find-donor" class="bg-red-600 hover:bg-red-700 text-white text-center px-8 py-5 rounded-2xl font-bold shadow-2xl shadow-red-200 transition-all transform hover:-translate-y-1.5 active:scale-95 duration-300">I Need Blood</a>
+            <!-- <button
               class="bg-white border-2 border-gray-200 hover:border-red-600 text-gray-800 px-8 py-5 rounded-2xl font-bold transition-all transform hover:-translate-y-1 active:scale-95 duration-300">
               Become a Donor
-            </button>
+            </button> -->
+            <a href="#registration-form" class="bg-white border-1 border-gray-400 px-8 py-5 rounded-2xl text-center font-bold text-gray-800 hover:bg-gray-100 shadow-2xl shadow-gray-300 transition-all transform hover:-translate-y-1.5 active:scale-95 duration-300">Become a Donor</a>
           </div>
         </div>
 
@@ -235,9 +237,13 @@
             class="p-4 rounded-xl bg-white dark:bg-gray-800 dark:text-white border-none focus:ring-2 focus:ring-red-500 shadow-sm">
             <option value="">Blood Group</option>
             <option value="A+">A+</option>
+            <option value="A-">A-</option>
             <option value="B+">B+</option>
+            <option value="B-">B-</option>
             <option value="O+">O+</option>
+            <option value="O-">O-</option>
             <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
           </select>
           <input type="text" id="reg-area" required placeholder="Your Area"
             class="p-4 rounded-xl bg-white dark:bg-gray-800 dark:text-white border-none focus:ring-2 focus:ring-red-500 shadow-sm">
@@ -359,47 +365,47 @@
   <!-- Oxygen Aid section End here -->
 
   <!-- Volunteers Section Start here -->
-<section id="volunteers" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="volunteers" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-4">
-        Our Dedicated <span class="text-red-600">Volunteers</span>
-      </h2>
-      <p class="text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto">
-        "Manush manusher jonno." Amader ei sena-ra din-rat kaj kore jacchen apnader shebay.
-      </p>
-    </div>
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-4">
+          Our Dedicated <span class="text-red-600">Volunteers</span>
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto">
+          "Manush manusher jonno." Amader ei sena-ra din-rat kaj kore jacchen apnader shebay.
+        </p>
+      </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <div
-        class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
-        <div class="relative w-32 h-32 mx-auto mb-6">
-          <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
+        <div
+          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
+          <div class="relative w-32 h-32 mx-auto mb-6">
+            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
+            </div>
+            <img src="/LifeFlow/assets/atul-profile.jpg" alt="Atul"
+              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
           </div>
-          <img src="/LifeFlow/assets/atul-profile.jpg" alt="Atul"
-            class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Atul Paul</h3>
+          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Lead Coordinator</p>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Atul Paul</h3>
-        <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Lead Coordinator</p>
+
+        <div id="dynamic-volunteers" class="contents"></div>
+
+        <div
+          class="bg-red-600 p-6 rounded-[2rem] text-center flex flex-col items-center justify-center text-white shadow-xl shadow-red-200 dark:shadow-none hover:scale-105 transition-transform">
+          <i class="fa-solid fa-handshake-angle text-4xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">Want to Join?</h3>
+          <p class="text-red-100 text-sm mb-6">Amader community-te volunteer hisebe kaj korun.</p>
+          <a href="./volunteer-reg.html"
+            class="bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-colors inline-block text-center">Apply
+            Now</a>
+        </div>
+
       </div>
-
-      <div id="dynamic-volunteers" class="contents"></div>
-
-      <div
-        class="bg-red-600 p-6 rounded-[2rem] text-center flex flex-col items-center justify-center text-white shadow-xl shadow-red-200 dark:shadow-none hover:scale-105 transition-transform">
-        <i class="fa-solid fa-handshake-angle text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold mb-2">Want to Join?</h3>
-        <p class="text-red-100 text-sm mb-6">Amader community-te volunteer hisebe kaj korun.</p>
-        <a href="./volunteer-reg.html"
-          class="bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-colors inline-block text-center">Apply
-          Now</a>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Developer Section -->
   <section id="developer" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join as Volunteer | LifeFlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+  <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      class="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-2xl border border-gray-100 dark:border-gray-700">
+
+      <div class="text-center">
+        <a href="index.html" class="inline-flex items-center gap-2 text-red-600 font-bold mb-4">
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white">Volunteer <span
+            class="text-red-600">Registration</span></h2>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 font-medium">Be a hero in someone's life today.</p>
+      </div>
+
+      <form id="volunteerForm" class="mt-8 space-y-5">
+        <div>
+          <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
+          <input type="text" id="v-name" required
+            class="mt-1 block w-full px-5 py-4 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all"
+            placeholder="Enter your name">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Phone Number</label>
+          <input type="tel" id="v-phone" required
+            class="mt-1 block w-full px-5 py-4 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all"
+            placeholder="017XXXXXXXX">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Area / City</label>
+          <input type="text" id="v-area" required
+            class="mt-1 block w-full px-5 py-4 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all"
+            placeholder="e.g. Dhaka, Savar">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Availability</label>
+          <select id="v-time"
+            class="mt-1 block w-full px-5 py-4 bg-gray-50 dark:bg-gray-700 border-none rounded-2xl dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all cursor-pointer">
+            <option value="Always">Always Available</option>
+            <option value="Day">Day Shift only</option>
+            <option value="Night">Night Shift only</option>
+            <option value="Weekends">Weekends Only</option>
+          </select>
+        </div>
+
+        <button type="submit"
+          class="group relative w-full flex justify-center py-4 px-4 border border-transparent font-black rounded-2xl text-white bg-red-600 hover:bg-red-700 transition-all transform active:scale-95 shadow-xl shadow-red-200 dark:shadow-none">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <script>
+    document.getElementById('volunteerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('v-name').value;
+
+      Swal.fire({
+        title: 'Application Received!',
+        text: `Hi ${name}, our team will contact you soon.`,
+        icon: 'success',
+        confirmButtonColor: '#dc2626',
+        background: document.body.classList.contains('dark') ? '#1f2937' : '#fff',
+        color: document.body.classList.contains('dark') ? '#fff' : '#000'
+      }).then(() => {
+        window.location.href = "index.html"; // Redirect to home after success
+      });
+    });
+  </script> -->
+  <script src="./src/volunteer.js"></script>
+</body>
+
+</html>

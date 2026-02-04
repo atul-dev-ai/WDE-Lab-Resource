@@ -4,11 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+  <!-- Tab Bar Icon not working  -->
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/dc2626/droplet.png">
+  <!-- Font Awesome CDN Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Output css file link -->
   <link rel="stylesheet" href="src/output.css">
+  <!-- Sweet Alert Library CDN Link -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+  <!-- Main Page Title -->
   <title>LifeFlow | Blood & Oxygen Aid | ATUL</title>
 </head>
 
@@ -19,7 +25,8 @@
       <div class="flex justify-between h-20">
 
         <div class="flex items-center">
-          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+          <div
+            class="flex-shrink-0 flex items-center gap-2 cursor-pointer hover:-translate-x-1 transform duration-300 hover:scale-105 transition-all">
             <div class="bg-red-600 p-2 rounded-lg">
               <i class="fa-solid fa-droplet text-white text-2xl"></i>
             </div>
@@ -30,15 +37,17 @@
         </div>
 
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#home" class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Home</a>
-          <a href="#find-donor" class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Find
+          <a href="#home"
+            class="text-gray-600 hover:text-red-600 font-[600] transition duration-300 hover:scale-125">Home</a>
+          <a href="#find-donor"
+            class="text-gray-600 hover:text-red-600 font-[600] transition duration-300 hover:scale-125">Find
             Donor</a>
           <a href="#oxygen-section"
-            class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Oxygen</a>
+            class="text-gray-600 hover:text-red-600 font-[600] transition duration-300 hover:scale-125">Oxygen</a>
           <a href="#volunteers"
-            class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Volunteers</a>
+            class="text-gray-600 hover:text-red-600 font-[600] transition duration-300 hover:scale-125">Volunteers</a>
           <a href="#developer"
-            class="text-gray-600 hover:text-red-600 font-medium transition duration-300">Developer</a>
+            class="text-gray-600 hover:text-red-600 font-[600] transition duration-300 hover:scale-125 ">Developer</a>
         </div>
 
         <div class="hidden md:flex items-center">
@@ -49,7 +58,8 @@
         </div>
 
         <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-gray-600 hover:text-red-600 focus:outline-none cursor-pointer">
+          <button id="menu-btn"
+            class="text-gray-600 hover:text-red-600 focus:outline-none cursor-pointer hover:scale-150 transform duration-300">
             <i class="fa-solid fa-bars text-2xl"></i>
           </button>
         </div>
@@ -57,11 +67,17 @@
     </div>
 
     <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6">
-      <a href="#home" class="block py-2 text-gray-600 font-medium">Home</a>
-      <a href="#find-donor" class="block py-2 text-gray-600 font-medium">Find Donor</a>
-      <a href="#oxygen-section" class="block py-2 text-gray-600 font-medium">Oxygen</a>
-      <a href="#volunteers" class="block py-2 text-gray-600 font-medium">Volunteers</a>
-      <a href="#developer" class="block py-2 text-gray-600 font-medium">Developer</a>
+      <a href="#home"
+        class="block py-2 text-gray-600 hover:text-red-600 font-[600] hover:translate-x-1.5 transform duration-200 ">Home</a>
+      <a href="#find-donor"
+        class="block py-2 text-gray-600 hover:text-red-600 font-[600] hover:translate-x-1.5 transform duration-200 ">Find
+        Donor</a>
+      <a href="#oxygen-section"
+        class="block py-2 text-gray-600 hover:text-red-600 font-[600] hover:translate-x-1.5 transform duration-200 ">Oxygen</a>
+      <a href="#volunteers"
+        class="block py-2 text-gray-600 hover:text-red-600 font-[600] hover:translate-x-1.5 transform duration-200 ">Volunteers</a>
+      <a href="#developer"
+        class="block py-2 text-gray-600 hover:text-red-600 font-[600] hover:translate-x-1.5 transform duration-200 ">Developer</a>
       <button
         class="mt-4 w-full bg-red-600 text-white py-3 rounded-xl font-bold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">Emergency
         Request</button>
@@ -73,10 +89,11 @@
   <section id="home" class="relative bg-white py-16 lg:py-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Small Live icon -->
+        <!-- left side parent div -->
         <div class="space-y-8">
+          <!-- live health insights badge -->
           <div
-            class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full text-red-600 font-bold text-xs uppercase tracking-widest">
+            class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full text-red-600 font-bold text-xs uppercase tracking-widest shadow-sm hover:shadow-md hover:-translate-y-2.5 transform duration-500 transition-all hover:scale-y-110 hover:translate-x-1.5">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
@@ -94,11 +111,11 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <button
-              class="bg-red-600 hover:bg-red-700 text-white px-8 py-5 rounded-2xl font-bold shadow-2xl shadow-red-200 transition-all transform hover:-translate-y-1 active:scale-95">
+              class="bg-red-600 hover:bg-red-700 text-white px-8 py-5 rounded-2xl font-bold shadow-2xl shadow-red-200 transition-all transform hover:-translate-y-1 active:scale-95 duration-300">
               I Need Blood
             </button>
             <button
-              class="bg-white border-2 border-gray-200 hover:border-red-600 text-gray-800 px-8 py-5 rounded-2xl font-bold transition-all transform hover:-translate-y-1 active:scale-95">
+              class="bg-white border-2 border-gray-200 hover:border-red-600 text-gray-800 px-8 py-5 rounded-2xl font-bold transition-all transform hover:-translate-y-1 active:scale-95 duration-300">
               Become a Donor
             </button>
           </div>
@@ -134,7 +151,7 @@
           </div>
 
           <div
-            class="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center sm:mt-12 transform hover:scale-105 transition-all duration-300">
+            class="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-50 flex flex-col items-center text-center sm:mt-12 transform hover:scale-105 transition-all duration-500">
             <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6">
               <i class="fa-solid fa-location-dot text-orange-600 text-2xl"></i>
             </div>
@@ -154,7 +171,8 @@
   <section id="find-donor" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white">Find a <span class="text-red-600">Donor</span>
+        <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white hover:translate-x-1 transform duration-200">
+          Find a <span class="text-red-600">Donor</span>
         </h2>
         <p class="text-gray-500 dark:text-gray-400 mt-2">Real-time donor search across Bangladesh</p>
       </div>
@@ -166,7 +184,7 @@
             <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Blood Group</label>
             <select id="blood-filter"
               class="w-full p-4 rounded-xl bg-gray-50 dark:bg-gray-700 dark:text-white border-none focus:ring-2 focus:ring-red-500">
-              <option value="all">All Groups</option>
+              <option value="all">Select Your Blood Groups</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>
@@ -196,6 +214,7 @@
     </div>
   </section>
   <!-- Find Donor section end here -->
+
   <!-- Donor Registration form here -->
   <section id="register-donor" class="py-20 bg-white dark:bg-gray-800 transition-colors">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -340,81 +359,47 @@
   <!-- Oxygen Aid section End here -->
 
   <!-- Volunteers Section Start here -->
-  <section id="volunteers" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="volunteers" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-4">
-          Our Dedicated <span class="text-red-600">Volunteers</span>
-        </h2>
-        <p class="text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto">
-          "Manush manusher jonno." Amader ei sena-ra din-rat kaj kore jacchen apnader shebay.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        <div
-          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
-          <div class="relative w-32 h-32 mx-auto mb-6">
-            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
-            </div>
-            <img src="/LifeFlow/assets/atul-profile.jpg" alt="Atul"
-              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Atul Paul</h3>
-          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Lead Coordinator</p>
-          <div class="flex justify-center gap-4 text-gray-400">
-            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="hover:text-red-600"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
-
-        <div
-          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
-          <div class="relative w-32 h-32 mx-auto mb-6">
-            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
-            </div>
-            <img src="https://ui-avatars.com/api/?name=Sifat+Ahmed&background=random" alt="Sifat"
-              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sifat Ahmed</h3>
-          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Blood Moderator</p>
-          <div class="flex justify-center gap-4 text-gray-400">
-            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div
-          class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
-          <div class="relative w-32 h-32 mx-auto mb-6">
-            <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
-            </div>
-            <img src="https://ui-avatars.com/api/?name=Rahat+Khan&background=random" alt="Rahat"
-              class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Rahat Khan</h3>
-          <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Field Volunteer</p>
-          <div class="flex justify-center gap-4 text-gray-400">
-            <a href="#" class="hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="hover:text-red-600"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
-
-        <div
-          class="bg-red-600 p-6 rounded-[2rem] text-center flex flex-col items-center justify-center text-white shadow-xl shadow-red-200 dark:shadow-none hover:scale-105 transition-transform">
-          <i class="fa-solid fa-handshake-angle text-4xl mb-4"></i>
-          <h3 class="text-2xl font-bold mb-2">Want to Join?</h3>
-          <p class="text-red-100 text-sm mb-6">Amader community-te volunteer hisebe kaj korun.</p>
-          <button class="bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-colors">Apply
-            Now</button>
-        </div>
-
-      </div>
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-4">
+        Our Dedicated <span class="text-red-600">Volunteers</span>
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 font-medium max-w-2xl mx-auto">
+        "Manush manusher jonno." Amader ei sena-ra din-rat kaj kore jacchen apnader shebay.
+      </p>
     </div>
-  </section>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div
+        class="group relative bg-gray-50 dark:bg-gray-900 p-6 rounded-[2rem] text-center border border-gray-100 dark:border-gray-700 hover:border-red-500 transition-all duration-300">
+        <div class="relative w-32 h-32 mx-auto mb-6">
+          <div class="absolute inset-0 bg-red-600 rounded-full rotate-6 group-hover:rotate-12 transition-transform">
+          </div>
+          <img src="/LifeFlow/assets/atul-profile.jpg" alt="Atul"
+            class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg">
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Atul Paul</h3>
+        <p class="text-red-600 font-semibold text-sm mb-4 tracking-wider uppercase">Lead Coordinator</p>
+      </div>
+
+      <div id="dynamic-volunteers" class="contents"></div>
+
+      <div
+        class="bg-red-600 p-6 rounded-[2rem] text-center flex flex-col items-center justify-center text-white shadow-xl shadow-red-200 dark:shadow-none hover:scale-105 transition-transform">
+        <i class="fa-solid fa-handshake-angle text-4xl mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Want to Join?</h3>
+        <p class="text-red-100 text-sm mb-6">Amader community-te volunteer hisebe kaj korun.</p>
+        <a href="./volunteer-reg.html"
+          class="bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-colors inline-block text-center">Apply
+          Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Developer Section -->
   <section id="developer" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -511,13 +496,17 @@
         <div>
           <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Quick Links</h4>
           <ul class="space-y-4">
-            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Find Blood
+            <li><a href="#find-donor" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Find
+                Blood
                 Donor</a></li>
-            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Emergency
+            <li><a href="#oxygen-section"
+                class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Emergency
                 Oxygen</a></li>
-            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Register as
+            <li><a href="#registration-form"
+                class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Register as
                 Donor</a></li>
-            <li><a href="#" class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Volunteer
+            <li><a href="#volunteers"
+                class="text-gray-500 dark:text-gray-400 hover:text-red-600 transition-colors">Volunteer
                 Team</a></li>
           </ul>
         </div>
@@ -572,6 +561,7 @@
 
   <!-- Main JavaScript file link -->
   <script src="src/input.js"></script>
+
 </body>
 
 </html>

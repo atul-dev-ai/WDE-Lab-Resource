@@ -35,7 +35,8 @@ Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 * 🚀 **[LifeFlow: Live health issue solve](https://atul-dev-ai.github.io/WDE-Lab-Resource/LifeFlow/)**
 * 🚀 **[Lab 1: Basic HTML](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_1/)**
 * 🚀 **[Lab 2: Advanced Layout](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_2/)**
-* 🚀 **[Lab Task - 1: Advanced Layout](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment01)**
+* 🚀 **[Lab Task - 1: Single Webpage](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-01)**
+* 🚀 **[Lab Task - 2: Modern Table](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-02)**
 
 ---
 

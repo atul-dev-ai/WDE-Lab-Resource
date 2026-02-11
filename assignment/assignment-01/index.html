@@ -193,7 +193,6 @@
       background: linear-gradient(135deg, #8e44ad, #9b59b6);
     }
 
-    /* লিস্ট স্টাইল */
     .list-container {
       display: grid;
       grid-template-columns: 1fr;
@@ -277,7 +276,7 @@
       width: 100%;
       max-width: 400px;
     }
-    
+
     video {
       width: 100%;
       max-width: 400px;
@@ -291,7 +290,9 @@
       gap: 15px;
     }
 
-    input, select, textarea {
+    input,
+    select,
+    textarea {
       padding: 12px;
       border: 1px solid #ddd;
       border-radius: 9px;
@@ -299,26 +300,30 @@
       width: 100%;
     }
 
-    input:focus, select:focus, textarea:focus {
+    input:focus,
+    select:focus,
+    textarea:focus {
       outline: none;
       border-color: #3498db;
       box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
     }
 
-    .radio-group, .checkbox-group {
+    .radio-group,
+    .checkbox-group {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       margin: 15px 0;
     }
 
-    .radio-group label, .checkbox-group label {
+    .radio-group label,
+    .checkbox-group label {
       display: flex;
       align-items: center;
       gap: 5px;
       cursor: pointer;
     }
-    
+
     button[type="submit"] {
       background: linear-gradient(135deg, #27ae60, #2ecc71);
       color: white;
@@ -342,6 +347,7 @@
       margin: 0;
       font-size: 15px;
     }
+
     footer span {
       color: #3498db;
       font-weight: bold;
@@ -392,36 +398,42 @@
         grid-template-columns: 1fr;
       }
 
-      ul,ol,dl {
+      ul,
+      ol,
+      dl {
         padding-left: 15px;
       }
+
       a.ex-link {
-        padding: 10px 20px ;
+        padding: 10px 20px;
         font-size: 14px;
       }
 
       .media-container {
         gap: 15px;
       }
+
       form {
         gap: 12px;
       }
 
-      input, select, textarea {
+      input,
+      select,
+      textarea {
         padding: 10px;
         font-size: 14px;
       }
+
       button {
         padding: 12px 24px;
         font-size: 14px;
         width: 100%;
       }
+
       footer {
         padding: 15px;
       }
     }
-
-
   </style>
 </head>
 
@@ -559,7 +571,6 @@
         </div>
       </section>
 
-      <!-- ফর্ম সেকশন -->
       <section id="form" class="form-section">
         <h2>Form Elements</h2>
 
@@ -601,13 +612,14 @@
                 <input type="checkbox" name="skills" value="html"> HTML
               </label>
               <label>
-                <input type="checkbox" name="skills" value="css" style="cursor:  style="cursor: pointer;";"> CSS
+                <input type="checkbox" name="skills" value="css" style="cursor:  style=" cursor: pointer;";"> CSS
               </label>
               <label>
-                <input type="checkbox" name="skills" value="javascript" style="cursor:  style="cursor: pointer;";"> JavaScript
+                <input type="checkbox" name="skills" value="javascript" style="cursor:  style=" cursor: pointer;";">
+                JavaScript
               </label>
               <label>
-                <input type="checkbox" name="skills" value="python" style="cursor:  style="cursor: pointer;";"> Python
+                <input type="checkbox" name="skills" value="python" style="cursor:  style=" cursor: pointer;";"> Python
               </label>
             </div>
           </div>
@@ -625,25 +637,25 @@
           <div>
             <label for="message">Message:</label>
             <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
-          </div> 
+          </div>
           <button type="submit">Submit</button>
         </form>
       </section>
     </main>
     <footer>
-      <p>&copy; 2026 <a href="https://atulpaul.vercel.app" style="text-decoration: none; font-size: 19px; font-weight: bolder; color: #27ae60;"> Atul Paul</a> | <span>HTML Practice</span></p>
+      <p>&copy; 2026 <a href="https://atulpaul.vercel.app"
+          style="text-decoration: none; font-size: 19px; font-weight: bolder; color: #27ae60;"> Atul Paul</a> |
+        <span>HTML Practice</span></p>
     </footer>
   </div>
+  // কনসোলে মেসেজ
+  console.log("HTML page loaded successfully!");
 
-  <!-- <script>
-    // কনসোলে মেসেজ
-    console.log("HTML page loaded successfully!");
-
-    // ফর্ম সাবমিশন হ্যান্ডলার
-    document.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Form submitted successfully!');
-    });
+  // ফর্ম সাবমিশন হ্যান্ডলার
+  document.querySelector('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Form submitted successfully!');
+  });
   </script> -->
 </body>
 

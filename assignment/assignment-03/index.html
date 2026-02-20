@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form | Lab Task | Atul Paul</title>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* শ্যাডো হালকা করা হয়েছে */
+      max-width: 450px;
+      margin-bottom: 50px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      /* ভুল ছিল: 60-0 */
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn {
+      background-color: #6c757d;
+      color: whitesmoke;
+      font-weight: 700;
+    }
+
+    .reset-btn {
+      background-color: #2e84cf;
+      color: white;
+      font-weight: 700;
+    }
+
+    /* Radio ও Checkbox সুন্দর করার জন্য */
+    .option-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    .option-group input {
+      width: auto;
+      margin: 0;
+    }
+
+    .option-group label {
+      display: inline;
+      font-weight: normal;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .group-title {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Student Information Form</h2>
+    <form action="#">
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="paulatul020@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="pw">Password:</label>
+        <input type="password" name="pw" id="pw" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob">
+      </div>
+
+      <div class="form-group">
+        <label class="group-title">Gender:</label>
+        <div class="option-group">
+          <input type="radio" name="gender" id="male" value="male">
+          <label for="male">Male</label>
+        </div>
+        <div class="option-group">
+          <input type="radio" name="gender" id="female" value="female">
+          <label for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="group-title">Skills:</label>
+        <div class="option-group">
+          <input type="checkbox" name="skills" id="html" value="html">
+          <label for="html">HTML</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="skills" id="python" value="python">
+          <label for="python">Python</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="skills" id="c-lang" value="c">
+          <label for="c-lang">C</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dept" class="group-title">Department</label>
+        <select name="dept" id="dept" style="cursor: pointer;">
+          <option value="CIS">CIS</option>
+          <option value="CSE">CSE</option>
+          <option value="SWE">SWE</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="address" class="group-title">Address</label>
+        <textarea name="address" id="address" placeholder="Enter your address" rows="3"></textarea>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <form>
+      <h2>Student Registration Form</h2>
+      <div class="form-group">
+        <label for="student-id">Student ID</label>
+        <input type="text" name="id" id="student-id" placeholder="Enter Your Student ID" required>
+      </div>
+      <div class="form-group">
+        <label for="course-name">Course Name</label>
+        <input type="text" name="crsnm" id="course-name" required placeholder="Enter Course Name">
+      </div>
+      <div class="form-group">
+        <label for="section">Section:</label>
+        <select id="section" name="section" style="cursor: pointer;">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="group-title">Course Type:</label>
+        <div class="option-group">
+          <input type="radio" name="course_type" id="theory" value="theory">
+          <label for="theory">Theory</label>
+        </div>
+        <div class="option-group">
+          <input type="radio" name="course_type" id="lab" value="lab">
+          <label for="lab">Lab</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea name="notes" id="notes" placeholder="Any Special Requests" rows="3"></textarea>
+      </div>
+      <div class="btn-group">
+        <button type="submit" class="submit-btn">Register Course</button>
+        <button type="reset" class="reset-btn">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>Basic HTML Form</h2>
+    <fieldset>
+      <legend>Name</legend>
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Enter Your First Name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter Your Last Name" required>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Other Questions</legend>
+      <div class="form-group">
+        <label class="group-title">Choose a drink:</label>
+        <div class="option-group">
+          <input type="radio" style="cursor: pointer;" name="drink" id="tea" value="tea">
+          <label for="tea">Tea</label>
+        </div>
+        <div class="option-group">
+          <input type="radio" style="cursor: pointer;" name="drink" id="coffee" value="coffee">
+          <label for="coffee">Coffee</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="group-title">What ice cream do you like?</label>
+        <div class="option-group">
+          <input type="checkbox" name="icecream" id="ice-choc" value="chocolate" style="cursor: pointer;">
+          <label for="ice-choc">Chocolate</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="icecream" id="ice-pudding" value="pudding" style="cursor: pointer;">
+          <label for="ice-pudding">Chocolate Pudding</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="icecream" id="ice-pudding" value="pudding" style="cursor: pointer;">
+          <label for="ice-pudding">Chocolate Peanut Butter</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="icecream" id="ice-strawberry" value="strawberry" style="cursor: pointer;">
+          <label for="ice-strawberry">Strawberry</label>
+        </div>
+        <div class="option-group">
+          <input type="checkbox" name="icecream" id="ice-vanilla" value="vanilla" style="cursor: pointer;">
+          <label for="ice-vanilla">Vanilla</label>
+        </div>
+      </div>
+      <div class="group-form">
+        <label for="school">Select a School</label>
+        <select name="school" id="school" required style="cursor: pointer;">
+          <option value="DIU">Daffodil International University</option>
+          <option value="HU">Hilltop University</option>
+          <option value="NSU">North South University</option>
+          <option value="Brac">Brac University</option>
+          <option value="harvard">Harvard University</option>
+        </select>
+        <label for="comments">Please Provide Comments</label>
+        <textarea name="comments" id="comments" placeholder="Write something" cols="40" rows="5"></textarea>
+      </div>
+    </fieldset>
+    <div class="btn-group">
+      <button type="submit" class="submit-btn">Submit Form</button>
+      <button type="reset" class="reset-btn">Clear Form</button>
+    </div>
+  </div>
+
+</body>
+</html>

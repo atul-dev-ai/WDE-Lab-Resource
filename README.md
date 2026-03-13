@@ -37,7 +37,7 @@ Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 * 🚀 **[Lab 2: Advanced Layout](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_2/)**
 * 🚀 **[Lab Task - 1: Single Webpage](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-01)**
 * 🚀 **[Lab Task - 2: Modern Table](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-02)**
-* 🚀 **[Semester Project - Using HTML, CSS, JS](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/semester-assignment)**
+* 🚀 **[Semester Project - Using HTML, CSS, JS](https://atul-dev-ai.github.io/WDE-Lab-Resource/semester-assignment)**
 
 ---
 

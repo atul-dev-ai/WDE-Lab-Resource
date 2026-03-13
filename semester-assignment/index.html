@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/dc2626/droplet.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>LifeFlow | Blood & Oxygen Aid | ATUL</title>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-droplet"></i></div>
+        <span>Life<span class="highlight">Flow</span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#find-donor">Find Donor</a></li>
+        <li><a href="#oxygen-section">Oxygen</a></li>
+        <li><a href="#developer">Developer</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="btn-primary emergency-btn">
+          <i class="fa-solid fa-circle-exclamation"></i> Emergency Request
+        </button>
+        <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge">Live Health Insights: Bangladesh</div>
+        <h1 class="hero-title">Every Drop <br><span class="highlight">Saves a Life.</span></h1>
+        <p class="hero-quote">
+          "Apnar deya ek bag rokto bachiye dite pare ekta poribarer shopno. Aj-i amader community-te jukto hon ebong
+          manobotar pashe daran."
+        </p>
+        <div class="hero-buttons">
+          <a href="#find-donor" class="btn-primary">I Need Blood</a>
+          <a href="#register-donor" class="btn-outline">Become a Donor</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-icon red"><i class="fa-solid fa-droplet"></i></div>
+          <h2>342</h2>
+          <p>Units Needed Today</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon blue"><i class="fa-solid fa-user-check"></i></div>
+          <h2>1450</h2>
+          <p>Active Donors</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green"><i class="fa-solid fa-wind"></i></div>
+          <h2>82</h2>
+          <p>Oxygen Hubs</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange"><i class="fa-solid fa-location-dot"></i></div>
+          <h2>5200+</h2>
+          <p>Lives Impacted</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="find-donor" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Find a <span class="highlight">Donor</span></h2>
+        <p>Real-time donor search across Bangladesh</p>
+      </div>
+
+      <div class="search-box card">
+        <div class="form-group">
+          <label>Blood Group</label>
+          <select id="blood-filter" class="form-control">
+            <option value="all">Select Your Blood Groups</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" id="location-filter" class="form-control" placeholder="e.g. Dhaka">
+        </div>
+
+        <div class="form-group btn-group">
+          <button class="btn-primary search-btn" onclick="filterDonors()">
+            <i class="fa-solid fa-magnifying-glass"></i> Search Now
+          </button>
+        </div>
+      </div>
+
+      <div id="donor-list" class="donor-grid"></div>
+    </div>
+  </section>
+
+  <section id="oxygen-section" class="section">
+    <div class="container">
+
+      <div class="oxygen-header-wrapper">
+        <div class="oxygen-header-text">
+          <h2>Oxygen <span class="highlight-blue">Support</span> Hub</h2>
+          <p class="oxygen-quote">"জরুরি মুহূর্তে অক্সিজেন সিলিন্ডার এবং কনসেন্টেটর খুঁজে পেতে আমাদের ভলান্টিয়ারদের
+            সাথে
+            যোগাযোগ করুন।"</p>
+        </div>
+        <button class="btn-blue provider-btn">
+          <i class="fa-solid fa-truck-medical"></i> Join as Provider
+        </button>
+      </div>
+
+      <div class="oxygen-grid">
+        <div class="oxygen-card">
+          <div class="oxygen-card-header">
+            <div class="oxygen-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+            <span class="oxygen-badge badge-blue">24/7 Service</span>
+          </div>
+          <h3 class="oxygen-title">Al-Modina Oxygen</h3>
+          <p class="oxygen-location"><i class="fa-solid fa-location-dot"></i> Mirpur-10, Dhaka</p>
+          <div class="oxygen-card-footer">
+            <div class="cylinder-stock">
+              <span class="stock-label">Cylinders</span>
+              <span class="stock-value">12 Available</span>
+            </div>
+            <a href="tel:01700000000" class="call-btn-square"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="oxygen-card">
+          <div class="oxygen-card-header">
+            <div class="oxygen-icon"><i class="fa-solid fa-wind"></i></div>
+            <span class="oxygen-badge badge-green">Refill Available</span>
+          </div>
+          <h3 class="oxygen-title">Savar Oxygen Bank</h3>
+          <p class="oxygen-location"><i class="fa-solid fa-location-dot"></i> Savar, Dhaka</p>
+          <div class="oxygen-card-footer">
+            <div class="cylinder-stock">
+              <span class="stock-label">Cylinders</span>
+              <span class="stock-value">08 Available</span>
+            </div>
+            <a href="tel:01700000000" class="call-btn-square"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="oxygen-card">
+          <div class="oxygen-card-header">
+            <div class="oxygen-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+            <span class="oxygen-badge badge-orange">Low Stock</span>
+          </div>
+          <h3 class="oxygen-title">City Aid Support</h3>
+          <p class="oxygen-location"><i class="fa-solid fa-location-dot"></i> Uttara, Dhaka</p>
+          <div class="oxygen-card-footer">
+            <div class="cylinder-stock">
+              <span class="stock-label">Cylinders</span>
+              <span class="stock-value">02 Available</span>
+            </div>
+            <a href="tel:01700000000" class="call-btn-square"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="developer" class="section alt-bg">
+    <div class="container">
+      <div class="dev-wrapper card">
+
+        <div class="dev-image-box">
+          <div class="img-frame">
+            <img src="/LifeFlow/assets/atul-profile.jpg" alt="Atul Paul">
+          </div>
+          <div class="dev-badge">Lead Developer</div>
+        </div>
+
+        <div class="dev-text-box">
+          <span class="dev-subtitle highlight">Developed By</span>
+          <h2 class="dev-title">Atul Paul</h2>
+          <p class="dev-degree">BSc in Web Development & Generative AI</p>
+
+          <p class="dev-quote">
+            "I am passionate about building solutions that make an impact. LifeFlow is my vision for a connected
+            healthcare community in Bangladesh."
+          </p>
+
+          <div class="dev-socials">
+            <a href="https://github.com/atul-dev-ai" target="_blank" class="social-btn github">
+              <i class="fa-brands fa-github"></i> <span>Atul-dev-ai</span>
+            </a>
+            <div class="icon-links">
+              <a href="https://www.facebook.com/atulkumar.paul.71" target="_blank" class="social-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/paul-atul/" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer alt-bg">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col brand-col">
+          <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-droplet"></i></div>
+            <span>Life<span class="highlight">Flow</span></span>
+          </div>
+          <p class="footer-text">Connecting heroes with those in need. Join our community to save lives through blood
+            and
+            oxygen support.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-circle"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#find-donor">Find Blood Donor</a></li>
+            <li><a href="#oxygen-section">Emergency Oxygen</a></li>
+            <li><a href="#register-donor">Register as Donor</a></li>
+            <li><a href="#volunteers">Volunteer Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">Safety Guidelines</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Us</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Dhaka, Bangladesh</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+880 16093 98958</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>paulatul020@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          © 2026 LifeFlow. Developed with ❤️ by
+          <a href="https://github.com/atul-dev-ai" target="_blank" class="developer-link">Atul Paul</a>.
+        </p>
+        <p class="degree-text">BSc in Computing and Information System major in AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

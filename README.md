@@ -37,6 +37,7 @@ Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 * 🚀 **[Lab 2: Advanced Layout](https://atul-dev-ai.github.io/WDE-Lab-Resource/Lab_2/)**
 * 🚀 **[Lab Task - 1: Single Webpage](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-01)**
 * 🚀 **[Lab Task - 2: Modern Table](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-02)**
+* 🚀 **[Lab Task - 3: Modern Form](https://atul-dev-ai.github.io/WDE-Lab-Resource/assignment/assignment-03)**
 * 🚀 **[Semester Project - Using HTML, CSS, JS](https://atul-dev-ai.github.io/WDE-Lab-Resource/semester-assignment)**
 
 ---
@@ -47,8 +48,10 @@ Assignments ebong Lab-er kajgulo live dekhte niche click korun:
 | Repository Setup | ✅ Completed | 27 - Jan - 2026 |
 | HTML Basics 01 | ✅ Completed | 27 - Jan - 2026 |
 | HTML Basics 02 | ✅ Completed | 03 - Feb - 2026 |
-| HTML Basics 03 | ⏳ Pending | - |
-| HTML Assignment 01 | ⏳ Pending | - |
+| HTML Basics 03 | ✅ Completed  | - |
+| HTML Assignment 01 | ✅ Completed | - |
+| HTML Assignment 02 | ✅ Completed | - |
+| HTML Assignment 03 | ✅ Completed | - |
 | HTML Basics 04 | ⏳ Pending | - |
 | HTML Basics 05 | ⏳ Pending | - |
 | HTML Basics 06 | ⏳ Pending | - |
